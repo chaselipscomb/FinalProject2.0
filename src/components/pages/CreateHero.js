@@ -11,6 +11,27 @@ const styles = {
     inputBox: {
         width: "80%",
         marginTop: "5%"
+    },
+    container: {
+        backgroundColor: "yellow",
+        width: "90%"
+    },
+    image: {
+        width: "40%",
+        borderRadius: "10%",
+        float: "left",
+        marginRight: "2%"
+
+    },
+    inline: {
+        display: "inline",
+    },
+    textmargin: {
+        margin: "0 2%"
+    },
+    statalias: {
+        marginTop: "2%",
+        backgroundColor: "pink"
     }
 }
 
@@ -65,12 +86,48 @@ function SearchHero() {
                             </InputGroup.Prepend>
                             <FormControl placeholder="Enter Alignment..." aria-label="Username" aria-describedby="basic-addon1" />
                         </InputGroup>
-                        
+
                         <Button variant="dark">Create Hero</Button>
                     </center>
                 </Col>
                 <Col>
-                    <div>preview</div>
+                    <div style={styles.container}>
+
+                        <img src="https://www.superherodb.com/pictures2/portraits/10/100/1305.jpg" style={styles.image} alt="picture" />
+                        <center>
+                            <h2>Thanos</h2>
+                            <h5>the Bad Guy</h5>
+                        </center>
+                        <div style={styles.textmargin}>
+                            <h6 style={styles.inline}>Bio: </h6><p style={styles.inline}>Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim</p>
+                            <br></br>
+                            <h6 style={styles.inline}>Alignment: </h6><p style={styles.inline}>bad</p>
+                        </div>
+                        <div style={styles.statalias}>
+                            <Row>
+                                <Col>
+                                    <ul>
+                                        <h6>Stats:</h6>
+                                        <li>Strength: 100</li>
+                                        <li>Agility: 100</li>
+                                        <li>Stamina: 100</li>
+                                        <li>Intelect: 100</li>
+                                        <li>Spirit: 100</li>
+                                    </ul>
+                                </Col>
+                                <Col>
+                                    <ul>
+                                        <h6>Aliases:</h6>
+                                        <li>Bad Guy 1</li>
+                                        <li>Bad Guy 2</li>
+                                        <li>Bad Guy 3</li>
+                                        <li>Bad Guy 4</li>
+                                        <li>Bad Guy 5</li>
+                                    </ul>
+                                </Col>
+                            </Row>
+                        </div>
+                    </div>
                 </Col>
             </Row >
         </React.Fragment >
