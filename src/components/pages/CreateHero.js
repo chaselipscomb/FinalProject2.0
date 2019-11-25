@@ -4,7 +4,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import DropDown from 'react-bootstrap/DropDown';
 
 
 const styles = {
@@ -13,15 +12,16 @@ const styles = {
         marginTop: "5%"
     },
     container: {
-        backgroundColor: "yellow",
-        width: "90%"
+        width: "90%",
+        borderStyle: "solid",
+        borderColor: "darkslategray",
+        borderWidth: "2px"
     },
     image: {
-        width: "40%",
+        width: "100%",
         borderRadius: "10%",
-        float: "left",
-        marginRight: "2%"
-
+        marginTop: "2%",
+        marginLeft: "10%"
     },
     inline: {
         display: "inline",
@@ -31,7 +31,6 @@ const styles = {
     },
     statalias: {
         marginTop: "2%",
-        backgroundColor: "pink"
     }
 }
 
@@ -92,17 +91,24 @@ function SearchHero() {
                 </Col>
                 <Col>
                     <div style={styles.container}>
-
-                        <img src="https://www.superherodb.com/pictures2/portraits/10/100/1305.jpg" style={styles.image} alt="picture" />
-                        <center>
-                            <h2>Thanos</h2>
-                            <h5>the Bad Guy</h5>
-                        </center>
-                        <div style={styles.textmargin}>
-                            <h6 style={styles.inline}>Bio: </h6><p style={styles.inline}>Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim</p>
-                            <br></br>
-                            <h6 style={styles.inline}>Alignment: </h6><p style={styles.inline}>bad</p>
-                        </div>
+                        <Row>
+                            <Col sm={4}>
+                                <center>
+                                    <img src="https://www.superherodb.com/pictures2/portraits/10/100/1305.jpg" style={styles.image} alt="picture" />
+                                </center>
+                            </Col>
+                            <Col sm={8}>
+                                <center>
+                                    <h2>Thanos</h2>
+                                    <h5>the Bad Guy</h5>
+                                </center>
+                                <div style={styles.textmargin}>
+                                    <h6 style={styles.inline}>Bio: </h6><p style={styles.inline}>Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim Lorem ipsim</p>
+                                    <br></br>
+                                    <h6 style={styles.inline}>Alignment: </h6><p style={styles.inline}>bad</p>
+                                </div>
+                            </Col>
+                        </Row>
                         <div style={styles.statalias}>
                             <Row>
                                 <Col>
@@ -127,6 +133,7 @@ function SearchHero() {
                                 </Col>
                             </Row>
                         </div>
+
                     </div>
                 </Col>
             </Row >
